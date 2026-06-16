@@ -1,0 +1,483 @@
+/* Configurações do site */
+
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin; /* Deixa a barra mais fina (auto, thin ou none) */
+    scrollbar-color: var(--cor-primaria) #feeed5b4 /* Cor da barra e cor do fundo */
+}
+
+
+
+:root {
+    --cor-primaria: #294C08;
+    --cor-secundaria: #FEEED5;
+    --cor-texto: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cor-primaria);
+    font-family: "Outfit", sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2 {
+    font-family: "Holtwood One SC", serif;
+    color: var(--cor-primaria);
+}
+
+nav ul{
+    color: var(--cor-primaria);
+    list-style: none;
+    gap: 4rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 50px;
+    margin-top: 20px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
+ul .active {
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 0.1rem;
+}
+
+ul li:hover {
+    border-bottom: 2px solid var(--cor-primaria);
+    transition: 0.3s ease;
+}
+
+/* Hero Site*/
+
+section {
+    margin-top: 4rem;
+    background: var(--cor-secundaria);
+    border-radius: 20px;
+    width: 80vw;
+    height: 80vh;
+    text-align: start;
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.home-content p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.home-content p:last-child {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.home-content h1 {
+    color: var(--cor-primaria);
+    font-size: 3rem;
+}
+
+.home-content span {
+    color: var(--cor-primaria);
+}
+
+.home-text {
+    padding: 2rem;
+}
+
+.home-image img {
+
+    width: 380px;
+    height: auto;
+}
+
+/* About Section */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 360px;
+    height: auto;
+}
+
+.about h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-text {
+    padding: 20px;
+    width: 500px;
+}
+
+
+.about span {
+    font-weight: 600;
+}
+
+/* Skills section */
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.skills-resume {
+    text-align: center;
+}
+
+.skills-resume p {
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.skills-resume h2 {
+    margin-bottom: 30px;
+    font-size: 60px;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--cor-secundaria);
+}
+
+.card span {
+    font-size: 35px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    padding: 16px;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: var(--cor-primaria);
+}
+
+.card img {
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+
+.d-image {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.card img:hover {
+    width: 63px;
+    height: 63px;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+
+/* Contato Sectiom */
+
+.content-contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.text-contact {
+    text-align: center;
+}
+
+.text-contact p {
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.text-contact h2 {
+    font-size: 50px;
+}
+
+.contato {
+    width: 80%;
+    height: 70%;
+    background: var(--cor-primaria);
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+/* LADO ESQUERDO */
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 3px;
+    color: white;
+    font-size: 18px;
+}
+
+.item:hover {
+    color: var(--cor-primaria);
+    border-radius: 20px;
+    background: var(--cor-secundaria);
+    padding: 3px 10px;
+    transition: all 0.3s ease-in-out;
+}
+.item:hover img {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(40%) saturate(900%) hue-rotate(65deg);
+}
+
+.item:last-child:hover {
+    padding: 3px 3px;
+}
+
+.item img {
+    width: 45px;
+    height: 45px;
+}
+
+
+/* LINHA */
+.linha {
+    width: 1px;
+    height: 190px;
+    background: white;
+}
+
+
+/* FORMULÁRIO */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    width: 360px;
+}
+
+
+.formulario input,
+.formulario textarea {
+
+    background: var(--cor-secundaria);
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+
+.formulario input {
+    height: 45px;
+}
+
+
+.formulario textarea {
+    height: 90px;
+    resize: none;
+}
+
+
+.formulario button {
+
+    width: 100px;
+
+    margin: auto;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--cor-secundaria);
+    color: var(--cor-primaria);
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    border: solid 1px var(--cor-secundaria);
+}
+
+@media (max-width: 480px) {
+    
+    * {
+    box-sizing: border-box;
+    scrollbar-width: none;
+    }
+
+    body {
+        background: var(--cor-secundaria);
+        overflow-x: hidden;
+    }
+
+    nav ul {
+        gap: 1rem;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+        height: 80%;
+        min-height: 30vh;
+        margin-top: 1rem;
+    }
+
+    .home-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+     .home-content p {
+        font-size: 16px;
+     }
+
+     .home-content span {
+        font-size: 18px;
+     }
+     .home-content p:last-child {
+        font-size: 16px;
+     }
+
+     .home-content h1 {
+        font-size: 30px;
+     }
+
+    .home-image img {
+        width: 180px;
+        position: relative;
+    }
+
+    /* About */
+
+    .about {
+        flex-direction: column;
+        width: 100vw;
+        text-align: start;
+    }
+
+    .about-image img {
+        width: 200px;
+    }
+
+    .about-text {
+        width: auto;
+        padding: 10px;
+    }
+
+    /* Skills */
+
+     .skills-resume h2 {
+        font-size: 30px;
+    }
+
+    .skills-resume p {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 95%;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .d-image {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .card img:hover {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Contato */
+
+    .contato {
+        width: 90%;
+        height: auto;
+        padding: 30px 15px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .linha {
+        width: 80%;
+        height: 1px;
+    }
+
+    .item {
+        font-size: 16px;
+    }
+
+    .formulario {
+        width: 85%;
+    }
+
+    .text-contact h2 {
+        font-size: 35px;
+    }
+
+    .text-contact p {
+        font-size: 18px;
+    }
+
+}

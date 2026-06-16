@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifolio</title>
+</head>
+<body>
+
+    <!-- Home Section -->
+
+    <section class="#home">
+        <header>
+        <nav>
+            <ul>
+                <li id="#home">Inicio</li>
+                <li id="#about">Sobre</li>
+                <li id="#resumo">Resumo</li>
+                <li id="#contato">Contato</li>
+            </ul>
+        </nav>
+    </header>
+
+        <div class="home-content">
+            <div class="home-text">
+            <p>Olá, Meu nome é</p>
+            <h1>João Victor</h1>
+            <p><span>Front-end Developer</span> & Graphic Designer</p>
+            <p>Transformo ideias em experiências digitais modernas, <br> funcionais e visualmente marcantes.</p>
+        </div>
+
+        <div class="home-image">
+            <img src="images/image-home.png" alt="Foto do home">
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+     <section class="about" id="#about">
+        <div class="about-image">
+            <img src="images/image-about.png" alt="Sobre mim">
+        </div>
+
+        <div class="home-content">
+            <div class="about-text">
+                <h2>Sobre Mim</h2>
+                <p>Sou <span>Designer Gráfico e Desenvolvedor Front-end</span> apaixonado por transformar ideias em experiências visuais e digitais. Combino criatividade, design estratégico e desenvolvimento web para criar interfaces modernas, funcionais e impactantes.</p>
+            </div>
+        </div>
+     </section>
+
+     <section class="skills">
+        <div class="skills-resume">
+            <p>Minhas</p>
+            <h2>Skills</h2>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2><span>Front</span> <br> end</h2>
+            </div>
+            <div class="d-image">
+                <img src="images/html-image.png" alt="html">
+                <img src="images/css-image.png" alt="css">
+                <img src="images/sass-image.png" alt="sass">
+                <img src="images/js-image.png" alt="js">
+                <img src="images/react-image.png" alt="reac">
+            </div>
+        </div>
+
+        <div class="card">
+            <div>
+                <h2><span>Designer</span> <br> Graphic</h2>
+            </div>
+            <div class="d-image">
+                <img src="images/ai-image.png" alt="Adobe Illustrator">
+                <img src="images/ps-image.png" alt="Adobe Photoshop">
+                <img src="images/figma.png" alt="Figma">
+                <img src="images/canva-img.png" alt="Canva">
+                <img src="images/behance.png" alt="Behance">
+            </div>
+        </div>
+     </section>
+
+     <!-- Contato section-->
+
+    <section class="content-contato">
+        <div class="text-contact">
+            <p>Entre em</p>
+            <h2>Contato</h2>
+        </div>
+
+    <div class="contato">
+        <div class="informacoes">
+        <div class="item">
+            <img src="images/icon-instagram.png" alt="">
+            <span>@victor.designernpng</span>
+        </div>
+
+        <div class="item">
+            <img src="images/icon-whatsapp.png" alt="">
+            <span>(75) 8176-9424</span>
+        </div>
+
+        <div class="item">
+            <img src="images/icon-email.png" alt="">
+            <span>jvnascimento310@gmail.com</span>
+        </div>
+    </div>
+
+
+    <div class="linha"></div>
+
+
+    <form class="formulario" onsubmit="enviarWhats(event)">
+        <input type="text" placeholder="Nome" id="nome">
+
+        <textarea placeholder="Descrição" id="mensagem"></textarea>
+
+        <button type="submit" class="botao-form">ENVIAR</button>
+    </form>
+    </div>
+</section>
+
+<script>
+    function enviarWhats(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById("nome").value;
+      const mensagem = document.getElementById("mensagem").value;
+      const telefone = "5575981769424";
+
+      const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+      const msgFormatada = encodeURIComponent(texto);
+
+      const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+      window.open(url, "_blank");
+    }
+</script>
+</body>
+</html>
